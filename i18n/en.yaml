@@ -84,9 +84,9 @@ unit_time:
   other: " minutes"
 
 article_wordcount:
-  other: "Word Count: "
+  other: "Word count: "
 article_readcount:
-  other: "Read Time: "
+  other: "Read time: "
 article_more:
   other: Read More
 article_comments:
@@ -94,7 +94,7 @@ article_comments:
 article_share:
   other: Share
 article_catalogue:
-  other: Catalogue
+  other: Table of content
 
 total_article:
   one: Total {{ .Count }} article
@@ -152,11 +152,11 @@ copyright_post:
 copyright_license:
   other: License
 
-insight_hint: 
+insight_hint:
   other: Type something...
-insight_posts: 
+insight_posts:
   other: Posts
-insight_pages: 
+insight_pages:
   other: Pages
 insight_categories:
   other: Categories
