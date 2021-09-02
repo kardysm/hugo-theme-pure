@@ -25,6 +25,24 @@
       {{ .Content }}
     </div>
     <div class="article-footer">
+      {{- $share := .Site.Params.share}}
+      {{- $profile := .Site.Params.profile }}
+      {{- $simpleShare := .Params.simpleShare}}
+      <div class="bar-right">
+        {{- with $profile.newsletter }}
+        <a class="block highlight-email" target="_blank" href="{{ . }}">👉 Stay in touch - subscribe to the newsletter 👈</a>
+        {{- end}}
+        {{- with $share.enable }}
+        👉
+        {{- if not $simpleShare }}
+          Was the article valuable to you?
+        {{- end }}
+        Share it. Let your groups' skills grow:
+        <div class="share-component" data-sites="{{- $share.sites }}"
+             data-mobile-sites="{{- $share.mobile_sites }}"></div>
+        {{- end }}
+      </div>
+
       {{- partial "post/copyright.html" . }}
     </div>
   </article>
