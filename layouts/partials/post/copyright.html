@@ -27,7 +27,13 @@
       </div>
       <div class="media-body">
         <h3 class="media-heading"><a href="{{- $profile.follow }}" target="_blank"><span class="text-dark">{{- $profile.author }}</span><small class="ml-1x">{{- $profile.author_title }}</small></a></h3>
+        {{- with $profile.author_email }}
+        <a class="block highlight-email" href="mailto:{{ . }}">{{- . }}</a>
+        {{- end}}
         <div>{{- $profile.author_description }}</div>
+        {{- with $profile.newsletter }}
+        <a class="block highlight-email" target="_blank" href="{{ . }}">👉 Stay in touch - subscribe to the newsletter 👈</a>
+        {{- end}}
       </div>
     </figure>
   </div>
