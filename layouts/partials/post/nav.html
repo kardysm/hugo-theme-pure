@@ -41,6 +41,7 @@
         {{- $share := .Site.Params.share}}
         <div class="bar-right">
             {{- with $share.enable }}
+            Share with your group:
             <div class="share-component" data-sites="{{- $share.sites }}"
                 data-mobile-sites="{{- $share.mobile_sites }}"></div>
             {{- end }}
