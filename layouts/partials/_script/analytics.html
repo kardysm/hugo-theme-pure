@@ -2,3 +2,7 @@
 {{- if and (not .Site.IsServer) .Site.GoogleAnalytics -}}
   {{ template "_internal/google_analytics_async.html" . }}
 {{- end -}}
+
+{{- if  .Site.Params.cloudflareAnalytics -}}
+  {{ partial "_script/analytics/cloudflare_analytics.html" . }}
+{{- end -}}
